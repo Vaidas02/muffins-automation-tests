@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+playwright-report/
+.DS_Store
+.env
+user.json
+.idea
+*/trace.zip
+/test-results/
+*.png
+test-results/

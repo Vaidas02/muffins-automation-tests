@@ -1,0 +1,211 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "eslint-plugin-unicorn",
+      "eslint-plugin-import",
+      "@typescript-eslint",
+      "@typescript-eslint/tslint",
+      "typescript-sort-keys",
+      "prettier",
+      "chai-expect"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "prettier",
+      "plugin:chai-expect/recommended"
+    ],
+    "parserOptions": {
+      "project": ["./tsconfig.json"],
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "ignorePatterns": [
+      ".eslintrc",
+      "environment.d.ts"
+  ],
+    "rules": {
+      "@typescript-eslint/adjacent-overload-signatures": "error",
+      "@typescript-eslint/array-type": [
+        "error",
+        {
+          "default": "array"
+        }
+      ],
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/ban-types": [
+        "error",
+        {
+          "extendDefaults": true,
+          "types": {
+            "{}": false,
+            "Object": {
+              "message": "Avoid using the `Object` type. Did you mean `object`?"
+            },
+            "Function": {
+              "message": "Avoid using the `Function` type. Prefer a specific function type, like `() => void`."
+            },
+            "Boolean": {
+              "message": "Avoid using the `Boolean` type. Did you mean `boolean`?"
+            },
+            "Number": {
+              "message": "Avoid using the `Number` type. Did you mean `number`?"
+            },
+            "String": {
+              "message": "Avoid using the `String` type. Did you mean `string`?"
+            },
+            "Symbol": {
+              "message": "Avoid using the `Symbol` type. Did you mean `symbol`?"
+            }
+          }
+        }
+      ],
+      "no-prototype-builtins": "off",
+      "@typescript-eslint/no-var-requires": "warn",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "require-yield": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/restrict-plus-operands": "off",
+      "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+          "checksVoidReturn": false
+        }
+      ],
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/consistent-type-assertions": "error",
+      "@typescript-eslint/explicit-member-accessibility": [
+        "error",
+        {
+          "accessibility": "no-public"
+        }
+      ],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "memberLike",
+          "modifiers": ["private"],
+          "format": ["camelCase"],
+          "leadingUnderscore": "require"
+        },
+        {
+          "selector": "classProperty",
+          "format": ["snake_case", "camelCase"],
+          "leadingUnderscore": "allow"
+        },
+        {
+          "selector": "classMethod",
+          "format": ["camelCase"]
+        }
+      ],
+      "@typescript-eslint/no-inferrable-types": [
+        "error",
+        {
+          "ignoreParameters": true
+        }
+      ],
+      "@typescript-eslint/no-misused-new": "error",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-parameter-properties": "error",
+      "@typescript-eslint/no-require-imports": "warn",
+      "@typescript-eslint/no-shadow": [
+        "error",
+        {
+          "hoist": "all"
+        }
+      ],
+      "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+      "@typescript-eslint/no-unnecessary-qualifier": "error",
+      "@typescript-eslint/prefer-for-of": "error",
+      "@typescript-eslint/prefer-function-type": "error",
+      "@typescript-eslint/prefer-namespace-keyword": "error",
+      "@typescript-eslint/triple-slash-reference": [
+        "error",
+        {
+          "path": "always",
+          "types": "prefer-import",
+          "lib": "always"
+        }
+      ],
+      "@typescript-eslint/unified-signatures": "error",
+      "semi": "off",
+      "@typescript-eslint/semi": "error",
+      "arrow-body-style": "warn",
+      "constructor-super": "error",
+      "curly": ["error", "multi-line"],
+      "eqeqeq": ["error", "smart"],
+      "guard-for-in": "error",
+      "max-classes-per-file": ["error", 1],
+      "max-len": [
+        "error",
+        {
+          "code": 160
+        }
+      ],
+      "new-parens": "error",
+      "no-bitwise": "error",
+      "no-caller": "error",
+      "no-cond-assign": "error",
+      "no-console": "error",
+      "no-debugger": "error",
+      "no-eval": "error",
+      "no-fallthrough": "error",
+      "no-multiple-empty-lines": "error",
+      "no-new-wrappers": "error",
+      "no-throw-literal": "error",
+      "no-trailing-spaces": "error",
+      "no-undef-init": "error",
+      "no-unsafe-finally": "error",
+      "no-unused-labels": "error",
+      "no-var": "warn",
+      "one-var": ["error", "never"],
+      "prefer-const": "error",
+      "quote-props": ["error", "as-needed"],
+      "radix": "error",
+      "space-before-function-paren": [
+        "error",
+        {
+          "anonymous": "always",
+          "named": "never",
+          "asyncArrow": "always"
+        }
+      ],
+      "spaced-comment": [
+        "error",
+        "always",
+        {
+          "markers": ["/"]
+        }
+      ],
+      "unicorn/filename-case": "error",
+      "use-isnan": "error",
+      "prettier/prettier": [
+          "error",
+          {
+              "tabWidth":4
+          }
+      ],
+      "@typescript-eslint/tslint/config": [
+        "error",
+        {
+          "rules": {
+            "import-spacing": true,
+            "number-literal-format": true,
+            "prefer-while": true
+          }
+        }
+      ]
+    }
+  }

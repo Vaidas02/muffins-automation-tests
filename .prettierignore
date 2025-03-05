@@ -1,0 +1,9 @@
+.vscode
+node-modules
+reports
+package.json
+package-lock.json
+README.md
+tsconfig.json
+tslint.json
+.eslintrc
